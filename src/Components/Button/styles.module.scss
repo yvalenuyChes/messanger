@@ -1,0 +1,32 @@
+.button__container{
+   margin: 20px 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.button{
+   line-height: 40px;
+   border-radius: 10px;
+   font-weight: 600;
+   font-size: 14px;
+   background-color: rgb(46, 207, 46);
+   color: white;
+ 
+}
+
+.Вконтакте{
+   background-color: rgb(59, 59, 234);
+}
+
+.Telegram{
+   background-color: rgb(108, 183, 249);
+}
+
+.WhatsApp{
+   background-color: rgb(89, 223, 89);
+}
+
+.SMS{
+   background-color: rgb(182, 182, 182);
+}

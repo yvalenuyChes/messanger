@@ -1,0 +1,31 @@
+.message_form{
+   margin: 0 40px;
+   max-height: 400px;
+   overflow-y: auto;
+   border: 1px solid rgb(226, 226, 226);
+   border-radius: 20px;
+   padding: 20px;
+   width: 400px;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+
+   &__quick_answers_list{
+      max-height: 300px;
+      overflow-y: auto;
+   }
+
+   &__chat{
+      margin: 20px 0;
+      width: 250px;
+      height: 300px;
+      border-radius: 10px;
+      border: 1px solid rgb(226, 226, 226);
+   }
+
+   &__title{
+      font-weight: 600;
+      font-size: 20px;
+      text-align: center;
+   }
+}
