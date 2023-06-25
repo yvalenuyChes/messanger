@@ -33,10 +33,14 @@ export default function MessageForm(){
       setShowInputQuickAnswer(false)
    }
 
+   function submitHandler(event){
+      event.preventDefault()
+   }
+
 
    return(
       <div className={styles.container}>
-         <div className={styles.message_form}>
+         <form className={styles.message_form} onSubmit={submitHandler} >
             <div className={styles.message_form__title} >
                <h2>
                   {platformName}
@@ -63,6 +67,7 @@ export default function MessageForm(){
                      <Button
                      text={'Отправить сообщение'}
                      width='170px'
+                     type={'submit'}
                      />
                   </div>
                   <div className={styles.message_form__quick_answers} >
@@ -77,7 +82,7 @@ export default function MessageForm(){
                               .map((answer, key) => {
 
                                  return <div key={key} >
-                                    <Button text={answer[1]} />
+                                    <Button text={answer[1]} type={'submit'} />
                                  </div>
                                 
                               })
@@ -106,7 +111,7 @@ export default function MessageForm(){
                               .map((answer, key) => {
 
                                  return <div key={key} >
-                                    <Button text={answer[1]} />
+                                    <Button text={answer[1]} type={'submit'} />
                                  </div>
                                 
                               })
@@ -127,7 +132,7 @@ export default function MessageForm(){
                <div onClick={() => setShowInputQuickAnswer(prev => !prev)} >
                   <Button
                      text={'Добавить быстрый ответ'}
-
+                     type={'button'}
                   />
                </div>
                {
@@ -142,6 +147,7 @@ export default function MessageForm(){
                      <Button
                         text={'Добавить'}
                         onClick={addShortAnswerHandler}
+                         type={'button'}
                      />
                   </div>
                   
@@ -149,7 +155,7 @@ export default function MessageForm(){
                   null
                }
             </div>
-         </div>
+         </form>
       </div>
    )
 }
